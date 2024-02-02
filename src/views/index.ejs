@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaude</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            font-size: 36px;
+            color: #551a8b; /* dark purple color */
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #551a8b; /* dark purple color */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>Plaude</header>
+    <% if (failed) { %>
+        <header style="color: red; font-size: 20px; font-weight: bold;">Opps!, Soory you have to click on the "Get Post" button below to get a post.</header>
+    <% }%>
+    <a href="/getPost?auth=true"><button onclick="getPost()">Get Post</button></a>
+
+    <script>
+        function getPost() {
+      
+        }
+    </script>
+</body>
+</html>
