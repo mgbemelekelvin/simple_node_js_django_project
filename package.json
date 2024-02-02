@@ -10,7 +10,7 @@
   "author": "TCG",
   "license": "ISC",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./bin/www",
     "build": "tsc",
     "copy-assets": "copyfiles -u 1 src/views/*.ejs views dist",
     "test": "jest -i --config ./test/jest.config.ts --no-cache",
