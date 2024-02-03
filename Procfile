@@ -1,1 +1,1 @@
-web: gunicorn postApp.wsgi
+web: gunicorn plaude.wsgi
