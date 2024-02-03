@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle }}</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            font-size: 36px;
+            color: #551a8b; /* dark purple color */
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #551a8b; /* dark purple color */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>Plaudge</header>
+    <header style="color: green; margin:10px;">Post Fetched Successfully!</header>
+    <p>Post Details</p>
+
+    <table border="1" style="margin-bottom:20px;">
+      <tr>
+        <th>ID</th>
+        <td>{{ post.theID }}</td>
+      </tr>
+      <tr>
+        <th>userID</th>
+        <td>{{ post.userID }}</td>
+      </tr>
+      <tr>
+        <th>title</th>
+        <td>{{ post.title }}</td>
+      </tr>
+      <tr>
+        <th>completed</th>
+        <td>{{ post.completed }}</td>
+      </tr>
+    </table>
+
+    <a href="/"><button>Go back Home</button></a>
+
+    <script>
+      // Check if 'auth' query parameter is present in the URL
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('auth')) {
+          // Remove 'auth' query parameter from the URL
+          url.searchParams.delete('auth');
+
+          // Replace the current URL without 'auth' parameter
+          window.history.replaceState({}, document.title, url.toString());
+      }
+  </script>
+  </body>
+</html>
