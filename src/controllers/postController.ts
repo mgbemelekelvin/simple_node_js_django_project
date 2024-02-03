@@ -42,7 +42,7 @@ export const getPost = async (req:Request, res: Response) => {
         !req
         return res.render('post', {
             post: existingPost ?? [],
-            pageTitle: 'Post',
+            pageTitle: existingPost.title,
             path: '/',
         });
     } catch (error) {
