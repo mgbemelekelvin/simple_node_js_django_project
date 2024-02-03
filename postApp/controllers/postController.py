@@ -1,7 +1,7 @@
 import random
 from django.shortcuts import render
 from ..views import (homeView)
-from ..models import Post
+from ..models.postModels import Post
 from ..utils import call_service
 
 
